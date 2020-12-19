@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
   //res.json("hello");
   var today = new Date()
 
-  res.send(today)
+  res.send("your api is working fine today" + today)
 });
 const port = process.env.PORT || 80;
 app.listen(port);
