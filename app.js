@@ -28,10 +28,13 @@ app.use("/posts", postsRoutes);
 
 //Routes
 app.get("/", (req, res) => {
-  res.json("hello");
-});
+  //res.json("hello");
+  var today = new Date()
 
-app.listen(3000);
+  res.send(today)
+});
+const port = process.env.PORT || 80;
+app.listen(port);
 
 //mongodb+srv://guru:<password>@cluster0.b7qnq.mongodb.net/<dbname>?retryWrites=true&w=majority
 //password - FJlIXNHRBpVb8iM8
